@@ -110,6 +110,7 @@ equalEl.addEventListener("click", () => {
   result = this.setCharAt(result,pos-2,'');
 
   result = result.replaceAll("x", "*");
+  result = result.replaceAll("^", "**");
   result = result.replaceAll("%", "*0.01");
   result = result.replaceAll("!", `${factorialize(num)}`);
 
@@ -160,7 +161,7 @@ window.addEventListener("keydown", (e) => {
     e.key === "." 
   ) {
     clickButtonEl(e.key);
-  } else if (e.key === "+" || e.key === "-" || e.key === "/" || e.key === "%") {
+  } else if (e.key === "+" || e.key === "-" || e.key === "/" || e.key === "%" || e.key === "!") {
     clickOperation(e.key);
   } else if (e.key === "*") {
     clickOperation("x");

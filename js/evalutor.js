@@ -7,7 +7,7 @@ class Postfix {
 	*   - https://www.geeksforgeeks.org/stack-set-2-infix-to-postfix/
 	*/
 
-	ops = {"*": 2, "*0.01": 2, "/": 2 , "-": 1, "+": 1}
+	ops = {"**": 2, "*": 2, "*0.01": 2, "/": 2 , "-": 1, "+": 1}
 
 	/**
 	 * Check a given character is one of allowed operators
