@@ -25,4 +25,13 @@ function selectTheme(theme) {
       }
     }
   }
+  else if (theme === "Dot Bubbles") {
+    for (let index = 0; index < themeClasses.length; index++) {
+      if (index === 2) {
+        themeClasses[index].style.display = "block";
+      } else {
+        themeClasses[index].style.display = "none";
+      }
+    }
+  }
 }

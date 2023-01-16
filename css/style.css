@@ -20,16 +20,17 @@
   }
 
 
-.container{
-  width: 36vw;
-  height: fit-content;
-  margin: auto;
-  background-color:var(--container-bg);
-  border-radius: 28px;
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-}
+  .container{
+    width: 36vw;
+    height: fit-content;
+    margin: auto;
+    background-color:var(--container-bg);
+    border-radius: 28px;
+    position: absolute;
+    top:50%;
+    transform: translate(0, -50%);
+
+  }
 
 .all_button{
   border-radius: 28px;
@@ -72,7 +73,7 @@
   box-shadow: var(--btn-shadow);
   border: none;
   border-radius: 50%;
-width: 3.7vw;
+  width: 3.7vw;
   height: 3.7vw;
   color: #1d2934;
   line-height: 53px;
@@ -275,3 +276,4 @@ width: 3.7vw;
 .bubbles span.seven:before{
   animation-delay: 6s;
 }
+

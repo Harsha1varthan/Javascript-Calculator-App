@@ -73,16 +73,50 @@ function mathOperation() {
 
   result  = `${result} ${lastOperation} ${dis2Num}`
 }
+function factorialize(num) {
+  var result = num;
+  if (num === 0 || num === 1) 
+    return 1; 
+  while (num > 1) { 
+    num--;
+    result *= num;
+  }
+  return result;
+}
+
+function setCharAt(str,index,chr) {
+  if(index > str.length-1) return str;
+  return str.substring(0,index) + chr + str.substring(index+1);
+}
 
 equalEl.addEventListener("click", () => {
   if (isContinue) dis1Num = dis1ResTemp;
-  if (!dis2Num || !dis1Num) return;
+  if ((!dis2Num || !dis1Num) && (lastOperation === 'x' || lastOperation === '+' || lastOperation === '-' || lastOperation === '/')) return;
   haveDot = false;
   mathOperation();
   isContinue = true;
   if (dis1NumTemp == 1 && lastOperation == "x") isContinue = false;
+  if (dis1NumTemp == 1 && lastOperation == "%") isContinue = false;
   clearVar();
-  result = evaluate(result.replaceAll("x", "*"))
+  let pos,num = -1;
+  for (let i = 0; i < result.length; i++) {
+    if (result[i] === '!'){
+      pos = i;
+      num = result[i-2];
+    }
+  }
+
+
+  result = this.setCharAt(result,pos-2,'');
+
+  result = result.replaceAll("x", "*");
+  result = result.replaceAll("^", "**");
+  result = result.replaceAll("%", "*0.01");
+  result = result.replaceAll("!", `${factorialize(num)}`);
+
+  if (num === -1)
+    result = evaluate(result);
+
   if (isContinue) resultTemp = result;
   display2El.innerText = result;
   dis2Num = result;
@@ -127,7 +161,7 @@ window.addEventListener("keydown", (e) => {
     e.key === "." 
   ) {
     clickButtonEl(e.key);
-  } else if (e.key === "+" || e.key === "-" || e.key === "/" || e.key === "%") {
+  } else if (e.key === "+" || e.key === "-" || e.key === "/" || e.key === "%" || e.key === "!") {
     clickOperation(e.key);
   } else if (e.key === "*") {
     clickOperation("x");
