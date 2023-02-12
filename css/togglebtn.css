@@ -1,4 +1,4 @@
-html {
+html[data-theme='light'] {
   --bg: #ebebeb;
   --display-bg: linear-gradient(145deg, #b8e0ee, #47b8d4);
   --display-shadow: 7px 7px 20px #4b6d75,
