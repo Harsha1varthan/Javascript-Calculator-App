@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-image: radial-gradient(#fff, gold);
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    width: 25%;
+    height: 25vw;
+    background-color: #00f;
+    border:  0.2rem solid black;
+    border-radius: 100%;   
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --UP_COLOR: #23424A;
+    --BUTTON_COLOR: #38CFD9;
+    --DOWN_FC: #136C72;
+    --UP_FC: #fff;
+    --BUTTON_FC: #000;
+    --BFS: 3rem;
+    --MFS: 1.8rem;
+    --SFS: 1.1rem;
+}
+
+.container{
+    width: 100%;
+    font-family: 'Roboto' sans-serif;
+
+}
+.nav__list{
+    display: flex;
+}
+.navi{
+    background-color: #136C72;
+    color:#fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+}
+.navi :is(a){
+    display: block;
+    width: 100%;
+    margin: 0.2em;
+}
+.navi :is(li){
+     margin-left: 1em; 
+}
+.navi :is(a:hover, a:focus){
+    cursor: pointer;
+    transform: scale(110%);
+    background-color: #fff;
+    color: #136C72;
+}
+.up__container{
+    width: 100%;
+    display: flex;
+    background-color: var(--UP_COLOR);
+    color: var(--UP_FC);
+    padding: 2em;
+    justify-content: space-around;
+}
+h1{
+    display: block;
+    padding: 0.5em;
+    font-size: var(--BFS);
+}
+h2{
+    font-size: var(--MFS);
+}
+:is(p, h3){
+    font-size: var(--SFS);
+}
+.para{
+    width: 65%;
+}
+img{
+    width: 20%;
+}
+.up__container p{
+    display: block;
+    padding: 1em;
+}
+a{
+    display: block;
+    background-color: var(--BUTTON_COLOR);
+    color: var(--BUTTON_FC);
+    width: 30%;
+    font-size: var(--MFS);
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.down__container{
+    display: flex;
+    background-color: var(--UP_FC);
+    color: var(--DOWN_FC);
+    font-size: var(--MFS);
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: space-around;
+}
+.left__do{
+    width: 50%
+}
+.left__do h2{
+    display: block;
+    padding: 1em;
+}
+.right__do{
+    background-color: #136C72;
+    color: #fff;
+    padding: 1.5rem;
+    width: 40%;
+
+}
+.cheap{
+    text-align: center;
+    margin: 0.8em;
+    padding: 0.5em;
+    
+}
+.quality{
+    text-align: center;
+    margin: 0.8em;
+    padding: 0.5em;
+   
+}
+.Affordable{
+    text-align: center;
+    margin: 0.8em;
+    padding: 0.5em;
+}
